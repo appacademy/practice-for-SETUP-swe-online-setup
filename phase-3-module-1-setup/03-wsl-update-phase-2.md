@@ -8,13 +8,12 @@ to test your code.
 
 ## GitHub
 
-Follow the instructions in the "GitHub Overview" article to sign up for a GitHub
-account, set up the Git Credential Manager to work through WSL, and set up your
-Personal Access Token (PAT). Make sure you run all commands through your Ubuntu
+Follow the instructions in the [GitHub Setup] article to sign up for a GitHub
+account, and set up the Git Credential Manager to work through WSL. Make sure you run all commands through your Ubuntu
 terminal.
 
 Under the "Configuring GitHub Authentication" section for Windows, follow the
-WSL specific instructions to set up the Git Credential Manager.
+WSL specific instructions to set up the Git Credential Manager, also pasted below:
 
 _If you are using WSL, run the following command in your terminal to tell git to
 use Windows Credential Manager._
@@ -217,3 +216,4 @@ If it prints out a version number, pay yourself on the back, you have
 successfully installed Node.JS and Mocha!
 
 [nvm Github Page]: https://github.com/nvm-sh/nvm
+[GitHub Setup]: https://github.com/appacademy/practice-for-SETUP-swe-online-setup/phase-2-prepwork-setup/02-github-setup.md

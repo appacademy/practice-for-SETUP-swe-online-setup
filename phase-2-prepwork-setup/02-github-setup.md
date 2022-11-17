@@ -8,7 +8,7 @@ an account if you do not have one already.
 By the end of this article you will be able to:
 
 1. Sign up for a GitHub account and set up a basic user profile
-2. Configure GitHub authentication using a Personal Access Token (PAT).
+2. Configure GitHub authentication using Git Credential Manager (GCM).
 3. Describe how you can leverage your profile throughout the program in order to
    prepare for the job search
 4. Identify the main elements of a repository that support collaboration
@@ -64,31 +64,27 @@ a way to authenticate to make sure that you are authorized to access or
 contribute new code.
 
 Thankfully, git handles this authentication flow automatically. But for GitHub,
-you can't use your GitHub account password. Instead, you can use a Personal
-Access Token (PAT) or an SSH key as a password to authenticate to Github and
-save it in a password manager so you don't have to use the token with every
-command that requires authentication.
+there are several options for handling this authentication. These instructions
+will walk you through setting up authentication through Git Credential Manager,
+which is App Academy's preferred method.
 
 __If you have _never_ configured GitHub authentication before, follow the
-instructions below to set up Git Credential Manager and Personal Access Token.
-This is the recommended approach for App Academy. Click the link to find more details about [Git Credential Manager Setup].__
+instructions below to set up Git Credential Manager. If you already have
+authentication set up using a PAT or SSH key, you may continue using that
+approach. You can reference this [SSH article] or [PAT article] for
+troubleshooting your existing setup if needed.__
 
-If you are already using the SSH approach, then no need to follow the
-instructions below! You can reference this [SSH article] instead for
-troubleshooting your setup if needed.
+### Git Credential Manager
 
-### Secrets Manager
-
-Before you get a PAT from Github and use it for authentication - you should
-setup your Secrets Manager. [Git Credential Manager] is the recommended secrets manager for Windows, Mac, and Linux.
+[Git Credential Manager] is the recommended secrets manager for GitHub authentication for Windows, Mac, and Linux.
 
 #### Windows
 
 If you followed the setup instructions for the Learning Challenges and installed Git for Windows, you will already have Git Credential Manager installed and ready to go.
 
-_If you did not install Git Credential Manager through Git for Windows, you will need to do a standalone installation of Git Credential Manager, choosing an installer from the [GCM assets documentation]. Talk to an instructor for support in choosing the correct option for your Windows setup._
+_If you did not install Git Credential Manager through Git for Windows, follow the more detailed instructions in the [Git Credential Manager Setup] article._
 
-_If you are using WSL, run the following command in your terminal to tell git to
+_If you are already using WSL, run the following command in your terminal to tell git to
 use Windows Credential Manager. If you are NOT using WSL, do not enter this
 command._
 
@@ -98,41 +94,27 @@ git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git
 
 #### Mac
 
-To install Git Credential Manager on Mac, you will use Homebrew. Open your Terminal, and run the following commands:
+To install Git Credential Manager on Mac, you will use Homebrew. Open your Terminal, and run the following two commands:
 
 ```shell
 brew tap microsoft/git
+
 brew install --cask git-credential-manager-core
 ```
 
-### Personal Access Token
+### Testing Git Credential Manager
 
-Once your secret manager is setup, you want to **restart your terminal**. Once
-restarted, you want to do two things. Generate a token from Github, and use that
-as your authentication for a privileged command.
+Once Git Credential Manager is set up, you need to **restart your terminal**.
 
-1. To get a new token, navigate to [Personal access tokens][PAT] in Github
-   settings. You can navigate there yourself by going to `Settings > Developer
-   Settings > Personal Access Tokens`.
+You can test to make sure GCM is working by attempting to clone or push to a
+private repository. When you do this, you should get prompted by a new Window to
+enter your GitHub credentials.
 
-2. Once here, click **Generate new token**.
+![GCM-browser-screenshot]
 
-3. Give your token a descriptive name. You can name it for the device you will
-   use the token from. This way, each computer can have their own unique token
-   and if you ever need to, you can revoke a token. You also want to use this
-   menu to set when your token expires and give it the allowed permissions. For
-   your purposes, you want to at least have all the repo permissions.
-
-> Once you have your token ready to generate, you should try running a
-> privileged command in git so you get a password prompt. Once you click
-> **Generate token** at the bottom of the *new token form* you will only be able
-> to see the token once.
-
-4. Now that you have your token, you can use it when git prompts you for a
-   password. If you are on Windows, you won't receive a password prompt but
-   instead you will receive a pop-up that asks for you Personal Access Token.
-   Because you previously configured your password/secret manager, your input
-   will be saved for you. This way, you don't need to keep track of your PAT.
+Choose "Browser/Device" and click "Sign in with your browser". You will then
+need to enter your GitHub username and password. Upon providing your
+credentials, your terminal should report it's success with the given operation.
 
 
 ## Keeping your garden green
@@ -195,8 +177,8 @@ configuration and GitHub authentication are working properly.
    - Putting it all together, your final command should look like this: `git
      clone https://github.com/appacademy/github-cloning-practice.git
      cloning-practice`
-5. At this point, you will see a prompt to enter you GitHub authentication
-   information (username and Personal Access Token). Enter this information when
+5. At this point, you may see a prompt to enter you GitHub authentication
+   information (username and password). Enter this information when
    prompted.
 6. Finally, you can open your cloned project in VSCode to check that it exists,
    and start coding! Run `code <local-repo-name>`, replacing the bracketed
@@ -207,10 +189,11 @@ configuration and GitHub authentication are working properly.
 To learn more about cloning repositories from GitHub, you can read the [Cloning
 a Repository Documentation].
 
-> _Note: The instructions above assume that you have configured GitHub using a
-> PAT. If you are using SSH, then make sure you are copying the SSH link from
-> GitHub when you click the green "Code" button, and enter your SSH key when
-> prompted._
+> _Note: The instructions above assume that you have configured GitHub
+> authentication using GitHub credential Manager through the browser. If you are
+> using SSH, then make sure you are copying the SSH link from GitHub when you
+> click the green "Code" button, and enter your SSH key when prompted. If you
+> are using a PAT, enter your PAT when prompted._
 
 Now that you have a GitHub account and know how to clone a remote repository,
 you are ready to apply these skills in the next set of practices.
@@ -232,4 +215,6 @@ https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Solo-Prep-Work/
 [SSH article]: https://hackmd.io/@AgDXdHgSSPKsJIhCxlaTuA/BJtNu88fF
 [Git Credential Manager]: https://github.com/GitCredentialManager/git-credential-manager
 [GCM assets documentation]: https://github.com/GitCredentialManager/git-credential-manager/releases/tag/v2.0.785
-[Git Credential Manager Setup]: https://github.com/appacademy/practice-for-SETUP-swe-online-setup/git-credential-manager.md
+[Git Credential Manager Setup]: https://github.com/appacademy/practice-for-SETUP-swe-online-setup/setup-resources/git-credential-manager.md
+[PAT article]: https://github.com/appacademy/practice-for-SETUP-swe-online-setup/setup-resources/setting-up-pat.md
+[GCM-browser-screenshot]: https://appacademy-open-assets.s3.us-west-1.amazonaws.com/Modular-Curriculum/content/setup/07-gcm-browser.png

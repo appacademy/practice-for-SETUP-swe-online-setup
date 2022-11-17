@@ -197,13 +197,19 @@ in your Windows environment. Now, any time you need an authorized Git request,
 WSL will send a signal out to GCM on Windows to handle the auth side of things
 and we can avoid the mess of configuring SSH or a PAT.
 
-## Testing GCM
+## Testing Git Credential Manager
 
-After you've completed the install for your system, test to make sure GCM is
-working by attempting to clone or push to a private repository. You should get
-prompted by a new Window to enter your GitHub credentials, or, optionally enter
-a PAT to authenticate. Upon providing your credentials, your terminal should
-report it's success with the given operation.
+Once Git Credential Manager is set up, you need to **restart your terminal**.
+
+You can test to make sure GCM is working by attempting to clone or push to a
+private repository. When you do this, you should get prompted by a new Window to
+enter your GitHub credentials.
+
+![GCM-browser-screenshot]
+
+Choose "Browser/Device" and click "Sign in with your browser". You will then
+need to enter your GitHub username and password. Upon providing your
+credentials, your terminal should report it's success with the given operation.
 
 <!-- External Links -->
 [GCM Latest Release]: https://github.com/GitCredentialManager/git-credential-manager/releases/latest
@@ -214,3 +220,4 @@ report it's success with the given operation.
 [git's default terminal emulator]: https://appacademy-open-assets.s3.us-west-1.amazonaws.com/Modular-Curriculum/content/setup/04-gitDefaultTerminalEmulator.png
 [Git Credential Manager]: https://appacademy-open-assets.s3.us-west-1.amazonaws.com/Modular-Curriculum/content/setup/05-gitCredentialManager.png
 [Install Git]: https://appacademy-open-assets.s3.us-west-1.amazonaws.com/Modular-Curriculum/content/setup/06-installGit.png
+[GCM-browser-screenshot]: https://appacademy-open-assets.s3.us-west-1.amazonaws.com/Modular-Curriculum/content/setup/07-gcm-browser.png
