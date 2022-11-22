@@ -58,9 +58,9 @@ __Option 2__: _If you completed Learning Challenges, but not Prep Work:_
 __Option 3__: _If you completed some of Prep Work, but not all, you will need to install
     any of the following software that you have not yet installed:_
 
-    - [ ] GitHub
-    - [ ] nvm and Node
-    - [ ] Mocha
+- [ ] GitHub
+- [ ] nvm and Node
+- [ ] Mocha
 
 __Option 4__: _If you completed Learning Challenges and ALL of Prep Work:_
 
