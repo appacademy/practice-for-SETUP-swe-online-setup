@@ -117,7 +117,7 @@ git config --global user.email   # your email address returned
 
 [Google Chrome]: https://www.google.com/chrome/
 [Visual Studio Code]: https://code.visualstudio.com/
-[Git For Winndows]: https://git-scm.com/download/win
+[Git For Windows]: https://git-scm.com/download/win
 [Select components]: https://appacademy-open-assets.s3.us-west-1.amazonaws.com/Module-Solo-Prep-Work/setup/select-components.png
 [VScode default]: https://appacademy-open-assets.s3.us-west-1.amazonaws.com/Module-Solo-Prep-Work/setup/vscode-git-default.png
 [Git decide]: https://appacademy-open-assets.s3.us-west-1.amazonaws.com/Module-Solo-Prep-Work/setup/git-decide.png
