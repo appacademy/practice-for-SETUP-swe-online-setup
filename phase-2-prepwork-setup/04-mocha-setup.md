@@ -130,3 +130,4 @@ In this reading, you learned what unit tests are, why they are important, how
 to read them, and how to run them.
 
 [Mocha]: https://mochajs.org/
+[Chai]: https://www.chaijs.com/
