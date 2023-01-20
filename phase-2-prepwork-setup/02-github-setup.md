@@ -216,5 +216,5 @@ https://appacademy-open-assets.s3-us-west-1.amazonaws.com/Module-Solo-Prep-Work/
 [Git Credential Manager]: https://github.com/GitCredentialManager/git-credential-manager
 [GCM assets documentation]: https://github.com/GitCredentialManager/git-credential-manager/releases/tag/v2.0.785
 [Git Credential Manager Setup]: https://github.com/appacademy/practice-for-SETUP-swe-online-setup/setup-resources/git-credential-manager.md
-[PAT article]: https://github.com/appacademy/practice-for-SETUP-swe-online-setup/setup-resources/setting-up-pat.md
+[PAT article]: https://github.com/appacademy/practice-for-SETUP-swe-online-setup/blob/main/setup-resources/setting-up-pat.md 
 [GCM-browser-screenshot]: https://appacademy-open-assets.s3.us-west-1.amazonaws.com/Modular-Curriculum/content/setup/07-gcm-browser.png
