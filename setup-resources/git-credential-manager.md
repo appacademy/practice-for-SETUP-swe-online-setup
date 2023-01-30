@@ -1,5 +1,10 @@
 # Git Credential Manager (GCM)
 
+_Note: If you already have GitHub authentication up and running using PAT or
+SSH, you do not need to take any action, and can skip this article. If you have
+NOT set up GitHub authentication yet, OR your authentication is not working,
+then this article is for you!_
+
 With all the different options for authenticating on GitHub, thought was given
 to finding a way to improve the authentication experience for all users of
 GitHub's services. Given the difficulties with setting up certain
