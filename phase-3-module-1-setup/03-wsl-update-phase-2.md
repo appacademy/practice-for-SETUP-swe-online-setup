@@ -216,4 +216,4 @@ If it prints out a version number, pay yourself on the back, you have
 successfully installed Node.JS and Mocha!
 
 [nvm Github Page]: https://github.com/nvm-sh/nvm
-[GitHub Setup]: https://github.com/appacademy/practice-for-SETUP-swe-online-setup/phase-2-prepwork-setup/02-github-setup.md
+[GitHub Setup]: https://github.com/appacademy/practice-for-SETUP-swe-online-setup/blob/main/phase-2-prepwork-setup/02-github-setup.md
