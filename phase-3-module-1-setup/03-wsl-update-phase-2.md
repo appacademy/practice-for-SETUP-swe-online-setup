@@ -1,28 +1,8 @@
 # Update Phase 2 Installations
 
 Now that you have WSL installed, it's time to revisit the software that you may
-have installed during Prep Work. Specifically, you need to make sure that
-you can authenticate to __GitHub__ through WSL using Git Credential Manager,
-re-install __Node.js__ through the `nvm` package, and install __Mocha__
-to test your code.
-
-## GitHub
-
-Follow the instructions in the [GitHub Setup] article to sign up for a GitHub
-account, and set up the Git Credential Manager to work through WSL. Make sure you run all commands through your Ubuntu
-terminal.
-
-Under the "Configuring GitHub Authentication" section for Windows, follow the
-WSL specific instructions to set up the Git Credential Manager, also pasted below:
-
-_If you are using WSL, run the following command in your terminal to tell git to
-use Windows Credential Manager._
-
-```shell
-git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager-core.exe"
-```
-
-That's it! You should now be all set to authenticate to GitHub through WSL.
+have installed during Prep Work. Specifically, you need to re-install __Node.js__
+through the `nvm` package, and install __Mocha__ to test code.
 
 ## nvm and Node.JS
 
@@ -216,4 +196,3 @@ If it prints out a version number, pay yourself on the back, you have
 successfully installed Node.JS and Mocha!
 
 [nvm Github Page]: https://github.com/nvm-sh/nvm
-[GitHub Setup]: https://github.com/appacademy/practice-for-SETUP-swe-online-setup/blob/main/phase-2-prepwork-setup/02-github-setup.md
